@@ -30,6 +30,8 @@ RewriteEngine on
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
+RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2 [L]
+
 
 </IfModule>
 ```
